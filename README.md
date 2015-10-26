@@ -1,2 +1,2 @@
 # GoogleClarify
-Analytics of diversity in tech using Google and Clarify's API
+Analytics of diversity in tech using Google's and Clarify's API
