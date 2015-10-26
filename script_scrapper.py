@@ -1,10 +1,23 @@
 import urllib
 from bs4 import BeautifulSoup
 
-list_of_images = BeautifulSoup(urllib.urlopen('https://www.airbnb.com/'))
-
+list_of_images = BeautifulSoup(urllib.urlopen('http://www.gardensafari.net/english/squirrels.htm'))
+menCounter = 0
+womenCounter = 0
 for img in list_of_images.find_all("img", src=True):
-    print(img["src"])
+	print(img["src"])
+	try:
+		values = clarifai_api.tag_image_urls('http://www.gardensafari.net/english/squirrels.htm'+img["src"])
+		tags =  values.get('results')[0].get('result').get('tag').get('classes')
+		for each in tags:
+				if(each == "men" or each == "boy" or each == "man"):
+					menCounter += 1
+				elif(each == "women" or each == "girl" or each == "woman"):
+					womenCounter += 1
+				print each
+
+	except:
+		pass
 
 
 

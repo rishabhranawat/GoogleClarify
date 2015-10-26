@@ -5,7 +5,7 @@ from clarifai.client import ClarifaiApi
 clarifai_api = ClarifaiApi()  # assumes environment variables are set.
 
 url = ('https://ajax.googleapis.com/ajax/services/search/images?' +
-       'v=1.0&q=nurse&userip=INSERT-USER-IP&start=0')
+       'v=1.0&q=profile%20pictures%20computer%20science&userip=INSERT-USER-IP&start=16')
 
 request = urllib2.Request(url, None, {})
 response = urllib2.urlopen(request)
