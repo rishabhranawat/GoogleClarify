@@ -1,0 +1,32 @@
+Documentation
+
+1. Collecting Image Data for the following queries:
+	a. Google Workers
+	b. Google Engineers
+	c. Facebook Workers
+	d. Facebook Engineers
+	e. Google Interns
+	f. Facebook Interns
+	g. Coders
+	h. Programmers
+	i. Computer Science students
+	j. MIT Computer Science students
+	k. Stanford Computer Science students
+	l. UC Berkeley Computer Science students
+	k. UCLA Computer Science students
+	m. Computer Scientists
+	n. Hackathons
+	o. Hackathon Hackers
+	p. PennApps
+	q. HackHarvard
+	r. Software Engineers
+	s. Engineers
+	t. Top linkedin Software profiles
+
+2. We can look for documents that portray weaknesses as negative characterisitcs
+		weaknesses portrayed as positive characteristics
+		Martin Selegman
+
+3. Overwhelming statistics
+
+4. 
