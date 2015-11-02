@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
 import urllib
-r = urllib.urlopen('http://timesofindia.indiatimes.com/international-home').read()
+r = urllib.urlopen('https://www.linkedin.com/title/engineering-practicum-intern').read()
 soup = BeautifulSoup(r)
 
 
-letters = soup.find_all("a")
+letters = soup.find_all("Education")
 print type(letters)
 print type(letters[0])
 lobbying = {}
