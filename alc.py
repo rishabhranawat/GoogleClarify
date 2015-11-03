@@ -45,6 +45,46 @@ while(counter != 100):
 
 '''
 
+negative = 0
+positive = 0
+neutral = 0
+
+import unirest
+alchemyapi = AlchemyAPI()
+
+counter = 0
+while(counter != 4):
+
+	url = ('https://ajax.googleapis.com/ajax/services/search/web'
+	       '?v=1.0&q=Google%20wokrers&start='+str(counter))
+
+	request = urllib2.Request(url, None, {})
+	response = urllib2.urlopen(request)
+
+	# Process the JSON string.
+	results = simplejson.load(response)
+	i = 0
+	for i in range(0, len(results.get("responseData").get("results")), 1):
+		print results.get("responseData").get("results")[i].get("title")
+			response = alchemyapi.entities('text', title, {'sentiment': 1})
+
+		if response['status'] == 'OK':
+		    for entity in response['entities']:
+		    	if(entity['sentiment']['type'] == 'negative'):
+		    		negative += 1
+		    	elif(entity['sentiment']['type'] == 'positive'):
+		       		positive += 1
+		       	else:
+		       		neutral +=1
+		else:
+		    print('Error in entity extraction call: ', response['statusInfo'])
+	counter += 4
+
+print negative
+print positive
+print neutral
+
+'''
 import unirest
 alchemyapi = AlchemyAPI()
 
@@ -78,3 +118,5 @@ for i in range(0, 100, 1):
 print negative
 print positive
 print neutral
+
+'''
